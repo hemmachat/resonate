@@ -33,6 +33,11 @@ namespace ConsoleApp1
             return result;
         }
 
+        public void Log(string message)
+        {
+            _logger.Log(message);
+        }
+        
         private double GetArgumentValue(T argument)
         {
             double argumentValue;

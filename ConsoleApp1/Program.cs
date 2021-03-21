@@ -13,12 +13,14 @@ namespace ConsoleApp1
             var fileLogger = new FileLogger();
             
             var firstFunction = new AddTwoNumbersThenDivide<double>(1.5d, consoleLogger);
+            firstFunction.Log("hello console logger");
             var result1 = firstFunction.Calculate(1, 2);
             var result2 = AddTwoNumbersThenDivide<double>.HigherOrderCalculation((x, y) => x + y, 3, 4);
             Console.WriteLine(result1);
             Console.WriteLine(result2);
             
             var secondFunction = new AddTwoNumbersThenDivide<double>(2d, fileLogger);
+            secondFunction.Log("hello file logger");
             var result3 = secondFunction.Calculate(1, 2);
             var result4 = AddTwoNumbersThenDivide<double>.HigherOrderCalculation((x, y) => x - y, 3, 4);
             Console.WriteLine(result3);
